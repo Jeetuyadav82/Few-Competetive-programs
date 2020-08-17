@@ -1,0 +1,13 @@
+def hasPathSum(root, sm):
+    if root is None:
+        return False
+    if root.left is None and root.right is None:
+        if root.data ==sm:
+            return True
+        else:
+            return False
+    if hasPathSum(root.left,sm-root.data):
+        return True
+    if hasPathSum(root.right,sm-root.data):
+        return True
+    return False

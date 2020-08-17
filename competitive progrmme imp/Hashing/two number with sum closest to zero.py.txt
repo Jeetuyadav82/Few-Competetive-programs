@@ -1,0 +1,19 @@
+for i in range(int(input())):
+    N = int(input())
+    Arr = [int(_) for _ in input().split()]
+    Arr.sort()
+    i = 0
+    j = N-1
+    D = 1000000
+    
+    while(i<j):
+        
+        X = Arr[i]+Arr[j]
+        if abs(D)>abs(X):
+            D = X
+        if X<0:
+            i+=1
+        else:
+            j-=1
+            
+    print(D)

@@ -1,0 +1,11 @@
+from operator import itemgetter
+for i in range(int(input())):
+    k=int(input())
+    s=input().split()
+    d=[]
+    for i in range(0,len(s)-1,2):
+        d.append([s[i],int(s[i+1])])
+    p= sorted(d, key = lambda kv:(kv[1], kv[0]))
+    for i in p:
+        print(i[0],i[1],end=" ")
+    print()

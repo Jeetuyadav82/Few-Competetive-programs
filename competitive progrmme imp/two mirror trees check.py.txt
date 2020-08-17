@@ -1,0 +1,8 @@
+def areMirror(a,b):
+    if not a and not b:
+        return True
+    if not a or not b:
+        return False
+    if a.data!=b.data:
+        return False
+    return areMirror(a.left,b.right) and areMirror(a.right,b.left)

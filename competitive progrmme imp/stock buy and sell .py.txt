@@ -1,0 +1,24 @@
+def stockBuySell(price, n):
+    j=0
+    m=price[0]
+    flag=True
+    for i in range(1,n-1):
+        if price[i]<=m:
+            m=price[i]
+            j=i
+            
+        elif price[i+1]<price[i]:
+            print('('+str(j)+' '+str(i)+')',end=" ")
+            j=i+1
+            m=price[i+1]
+            flag=False
+                
+    if price[-1]>m:
+        print('('+str(j)+' '+str(n-1)+')')
+        flag=False
+        
+    elif flag:
+        print('No Profit')
+        
+    else:
+        print()

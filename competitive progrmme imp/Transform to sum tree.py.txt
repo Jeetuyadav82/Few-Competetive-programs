@@ -1,0 +1,16 @@
+int toSumTreeaux(Node *node){
+   if(node==NULL)return 0;
+   
+   int left=toSumTreeaux(node->left);
+   int right=toSumTreeaux(node->right);
+   int temp=node->data;
+   node->data=left+right;
+   return temp+ node->data;
+    
+    
+}
+void toSumTree(Node *node){
+    if(node==NULL)return;
+    
+    int ans=toSumTreeaux(node);
+}

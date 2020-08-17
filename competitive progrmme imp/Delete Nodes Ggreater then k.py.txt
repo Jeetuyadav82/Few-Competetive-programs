@@ -1,0 +1,8 @@
+def deleteNode(root, X):
+    if root==None:
+        return None
+    if root.data>=X:
+        return deleteNode(root.left,X)
+    else:
+        root.right = deleteNode(root.right,X)
+    return root

@@ -1,0 +1,12 @@
+for _ in range(int(input())):
+    n = int(input())
+    ans = ""
+    while n:
+        if n%26==0:
+            ans = "Z" + ans
+            n = n//26 -1
+        else:
+            ans = chr(n%26 +ord("A")-1) + ans
+            n = n//26
+    
+    print(ans)

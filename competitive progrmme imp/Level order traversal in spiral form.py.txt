@@ -1,0 +1,30 @@
+def printSpiral(root):
+    if not root:
+        return 
+    queue=[]
+    queue.append(root)
+    k=0
+    while queue:
+        l=len(queue)
+        x=[]
+        while l:
+            temp=queue.pop(0)
+            x.append(temp.data)
+            if temp.left:
+                queue.append(temp.left)
+            if temp.right:
+                queue.append(temp.right)
+            l-=1
+        if k==0:
+            while x:
+                print(x[-1],end=" ")
+                x.pop()
+                k=1
+        else:
+            while x:
+                print(x[0],end=" ")
+                x.pop(0)
+                k=0
+            
+                    
+    

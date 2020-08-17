@@ -1,0 +1,19 @@
+for i in range(int(input())):
+    k=int(input())
+    arr=[int(i) for i in input().split()]
+    x=int(input())
+    i=0
+    j=k-1
+    flag=0
+    while(i<j):
+        if arr[i]+arr[j]==x:
+            flag=1
+            print(arr[i],arr[j],x)
+            i+=1
+            j-=1
+        elif arr[i]+arr[j]>x:
+            j-=1
+        else:
+            i+=1
+    if not flag:
+        print(-1)
